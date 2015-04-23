@@ -36,7 +36,7 @@ public struct Point3 {
 				throw new UnityException("invalid index");
 			}
 		}
-		private set {
+		set {
 			switch (index) {
 			case 0:
 				x = value;
@@ -138,7 +138,7 @@ public struct Point3 {
 	}
 
 	public override int GetHashCode() {
-		return x+y+z;
+		return x.GetHashCode()+y.GetHashCode()+z.GetHashCode();
 	}
 
 	/// <summary>
